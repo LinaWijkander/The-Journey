@@ -1,6 +1,6 @@
 import React from 'react';
 
-import StandardButton from '../../atoms/button/StandardButton';
+import { Button } from '../../atoms/button/Button';
 import './header.css';
 
 type User = {
@@ -14,7 +14,7 @@ interface HeaderProps {
   onCreateAccount: () => void;
 }
 
-const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
   <header>
     <div className="wrapper">
       <div>
@@ -42,16 +42,15 @@ const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
             <span className="welcome">
               Welcome, <b>{user.name}</b>!
             </span>
-            <StandardButton size="small" onClick={onLogout} label="Log out" />
+            <Button size="small" onClick={onLogout} label="Log out" />
           </>
         ) : (
           <>
-            <StandardButton size="small" onClick={onLogin} label="Log in" />
-            <StandardButton primary size="small" onClick={onCreateAccount} label="Sign up" />
+            <Button size="small" onClick={onLogin} label="Log in" />
+            <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
           </>
         )}
       </div>
     </div>
   </header>
 );
-export default Header;

@@ -1,25 +1,27 @@
+import React from 'react';
 import './button.css';
 
 interface ButtonProps {
   primary?: boolean;
   backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
-  label: string;
+  label: string; // lägg i icon + "string"
   onClick?: () => void;
 }
 
-const StandardButton = ({
+
+export const Button = ({
   primary = false,
   size = 'medium',
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'button--primary' : 'button--secondary';
+  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
   return (
     <button
       type="button"
-      className={['button', `button--${size}`, mode].join(' ')}
+      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
       style={{ backgroundColor }}
       {...props}
     >
@@ -27,5 +29,3 @@ const StandardButton = ({
     </button>
   );
 };
-export default StandardButton;
- 

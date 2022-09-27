@@ -1,12 +1,13 @@
 import React from 'react';
-import Header from '../../organisms/header/Header';
+
+import { Header } from '../../organisms/header/Header';
 import './page.css';
 
 type User = {
   name: string;
 };
 
-const Page: React.VFC = () => {
+export const Page: React.VFC = () => {
   const [user, setUser] = React.useState<User>();
 
   return (
@@ -70,4 +71,3 @@ const Page: React.VFC = () => {
     </article>
   );
 };
-export default Page;
