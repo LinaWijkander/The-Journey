@@ -1,31 +1,32 @@
-import React from 'react';
 import './button.css';
 
 interface ButtonProps {
   primary?: boolean;
   backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
-  label: string; // lägg i icon + "string"
+  label?: string | JSX.Element; 
   onClick?: () => void;
+  //withIcon?: boolean;
+  //svg?: string;
 }
+// Button
+// isLoading
+// basic
+// pill
+// long Button
+// disabled
+// pill with icon
 
-
-export const Button = ({
-  primary = false,
-  size = 'medium',
-  backgroundColor,
-  label,
-  ...props
-}: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+export const Button = ({primary = false, size = 'medium', backgroundColor, label = "Button", ...props}: ButtonProps) => {
+  const mode = primary ? 'button-primary' : 'button-secondary';
+  //const Icon = svg ? svg : "Button";
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
+      className={['button', `button-${size}`, mode].join(' ')}
+      style={{backgroundColor }}
+      {...props}>
+        {label}
     </button>
   );
 };

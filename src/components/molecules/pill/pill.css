@@ -1,0 +1,46 @@
+.pill {
+    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 1;
+    border-width: 0.1em;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .pill-outlined {
+    font-family: 'Gill Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    border: 0;
+    border-radius: 3em;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+  .pill-primary {
+    color: white;
+    background-color: #1ea7fd;
+    line-height: 1.6;
+  }
+  .pill-secondary {
+    color: #333;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    line-height: 1.6;
+  }
+  .pill-small {
+    font-size: 12px;
+    padding: 10px 16px;
+     line-height: 1.9;
+  }
+  .pill-medium {
+    font-size: 14px;
+    padding: 11px 20px;
+     /*line-height: 1.6;*/
+  }
+  .pill-large {
+    font-size: 16px;
+    padding: 12px 24px;
+    line-height: 1.4;
+  }
+  

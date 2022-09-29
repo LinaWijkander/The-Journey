@@ -1,0 +1,20 @@
+.grid-default {
+    display: flex;
+    gap: 2*0.25rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.grid-secondary {
+    display: flex;
+    gap: 2*0.25rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.grid-tertiary {
+    display: flex;
+    gap: 2*0.25rem;
+    flex-wrap: wrap;
+    flex-direction: row;
+}

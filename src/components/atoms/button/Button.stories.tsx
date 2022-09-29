@@ -1,16 +1,16 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-
 import { Button } from './Button';
+
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Example/Button',
+  title: 'Atoms/Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  
 } as ComponentMeta<typeof Button>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
@@ -39,3 +39,19 @@ Small.args = {
   size: 'small',
   label: 'Button',
 };
+
+export const WithEmoji = Template.bind({});
+WithEmoji.storyName = "With Emoji";
+WithEmoji.args = {
+  size: 'small',
+  label:'😍',
+};
+
+//White plus sign in black circle
+/* export const IconButton: ComponentStory<typeof Button> = (args) =>  <Button {...args}/>;
+
+IconButton.args=
+{
+  //label: <Icon/>
+  withIcon: true
+}; */
