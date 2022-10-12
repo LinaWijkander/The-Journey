@@ -1,4 +1,4 @@
-import Heading from "../heading/Heading";
+import Heading from "./Heading";
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 export default {
@@ -11,37 +11,40 @@ export default {
 
 const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args} />;
 
+
+
 // STORIES ------------------------------
-export const Title = Template.bind({});
-// might need separate css class
-Title.args = {
-    text: "Title",
-    size: "huge"
+export const Regular14 = Template.bind({});
+Regular14.args = {
+    text: "Heading Regular 14",
+    /* fontSize: "14px", */
+    size: "xs"
 }
 
-export const HeadingLarge = Template.bind({});
-HeadingLarge.storyName = "Heading Large" ;
-HeadingLarge.args = {
-    text: "Heading large",
-    size: "large"
-}
-
-export const HeadingMedium = Template.bind({});
-HeadingMedium.storyName = "Heading Medium" ;
-HeadingMedium.args = {
-    text: "Heading medium",
-    size: "medium"
-}
-
-export const HeadingSmall = Template.bind({});
-HeadingSmall.storyName = "Heading Small" ;
-HeadingSmall.args = {
-    text: "Heading small",
+export const Regular15 = Template.bind({});
+Regular15.args = {
+    text: "Heading Regular 15",
+    // fontSize: "15px",
     size: "small"
 }
 
-/* export const heading1 = () => <Heading text="Heading 1" size={1}/> 
-export const heading2 = () => <Heading text="Heading 2" size={2}/> 
-export const heading3 = () => <Heading text="Heading 3" size={3}/>  */
+export const Regular17 = Template.bind({});
+Regular17.args = {
+    text: "Heading Regular 17",
+    size: "medium"
+}
 
+export const Bold17 = Template.bind({});
+Bold17.args = {
+    text: "Heading Bold 17",
+    bold: true,
+    size: "medium"
+}
 
+export const Bold22 = Template.bind({});
+Bold22.args = {
+    text: "Heading Bold 22",
+    // fontSize: "22px",
+    bold: true,
+    size: "large"
+}

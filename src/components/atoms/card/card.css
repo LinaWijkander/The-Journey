@@ -1,0 +1,11 @@
+.card {
+    box-sizing: border-box;
+    background: #BDC9FF;
+    box-shadow: 4px 4px 0px #191B36;
+    border-radius: 14px;
+    border-color: #191B36;
+    border-width: 2px 2px 2px 2px;
+    border-style: solid;
+    padding: 16px;
+}
+

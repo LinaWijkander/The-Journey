@@ -1,30 +1,26 @@
 import './pill.css';
-import  Icon  from '../../atoms/icon/Icon';
+import { ReactNode } from 'react';
 
 interface PillProps {
-  primary?: boolean;
+  flexible?: boolean;
   backgroundColor?: string;
-  size?: 'small' | 'medium' | 'large';
   label: string; 
   onClick?: () => void;
-  outlined?: boolean;
+  icon: ReactNode;
 }
 
-// todo fix for setting line height for button text to be centered lineHeight: 1.65
+const Pill = ({flexible = false, backgroundColor, label, icon, ...props}: PillProps) => {
+  const mode = flexible ? 'pill-flexible' : 'pill-standard';
 
-const Pill = ({primary = false, size = 'medium', backgroundColor, label, outlined, ...props}: PillProps) => {
-  const mode = primary ? 'pill-primary' : 'pill-secondary';
-  const border = outlined ? 'pill-outlined' : 'pill';
   return (
     <button
       type="button"
-      className={['pill', `pill-${size}`, mode, border].join(' ')}
+      className={['pill', mode].join(' ')}
       style={{backgroundColor }}
       {...props}
     >
-        {<Icon/>}
+      {icon}
       {label}
-      
     </button>
   );
 };

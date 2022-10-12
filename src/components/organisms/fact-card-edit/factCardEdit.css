@@ -1,0 +1,9 @@
+.factCardEdit-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    height: 100%;
+   
+    justify-content: space-between;
+}

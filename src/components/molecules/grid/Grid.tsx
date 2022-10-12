@@ -7,7 +7,7 @@ type GridProps = {
     direction: "row"|"column",
     wrap: boolean,
     numberOfChildren?: number,
-    children?: React.ReactNode //JSX.Element|JSX.Element[];
+    children?: React.ReactNode;
 }
 
 const Grid = (props: GridProps): React.ReactElement => {    

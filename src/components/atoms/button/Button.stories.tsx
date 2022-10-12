@@ -1,31 +1,33 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button } from './Button';
+import {penIcon} from '../../../assets/icons';
 
-
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Atoms/Button',
   component: Button,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+  
   argTypes: {
     backgroundColor: { control: 'color' },
   },
   
 } as ComponentMeta<typeof Button>;
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-Primary.args = {
-  primary: true,
+
+// STORIES ------------------------------
+export const Small = Template.bind({});
+Small.args = {
+  size: 'small',
   label: 'Button',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
+export const SmallDisabled = Template.bind({});
+SmallDisabled.storyName = "Small Disabled"
+SmallDisabled.args = {
+  size: 'small',
   label: 'Button',
+  disabled: true,
 };
 
 export const Large = Template.bind({});
@@ -34,24 +36,25 @@ Large.args = {
   label: 'Button',
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
+export const LargeDisabled = Template.bind({});
+LargeDisabled.storyName = " Large Disabled"
+LargeDisabled.args = {
+  size: 'large',
   label: 'Button',
+  disabled: true,
 };
 
-export const WithEmoji = Template.bind({});
+export const WithIcon = Template.bind({});
+WithIcon.storyName = "With Icon"
+WithIcon.args = {
+  size: 'small',
+  label: 'Answer',
+  icon: penIcon,
+};
+
+/* export const WithEmoji = Template.bind({});
 WithEmoji.storyName = "With Emoji";
 WithEmoji.args = {
   size: 'small',
   label:'😍',
-};
-
-//White plus sign in black circle
-/* export const IconButton: ComponentStory<typeof Button> = (args) =>  <Button {...args}/>;
-
-IconButton.args=
-{
-  //label: <Icon/>
-  withIcon: true
 }; */

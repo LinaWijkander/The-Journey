@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import Pill from './Pill';
-
+//import { penIcon } from '../../../assets/icons';
 
 export default {
   title: 'Molecules/Pill',
@@ -12,32 +12,39 @@ export default {
 
 const Template: ComponentStory<typeof Pill> = (args) => <Pill {...args} />;
 
+
+// STORIES ------------------------------
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Selection Pill',
+  label: 'Primary',
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Selection Pill',
+export const PrimarySelected = Template.bind({});
+PrimarySelected.storyName = "Primary Selected"
+PrimarySelected.args = {
+  backgroundColor: "#99E9CA",
+  label: 'Selected',
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Selection Pill',
+export const Flexible = Template.bind({});
+Flexible.args = {
+  flexible: true,
+  label: 'Flex',
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Selection Pill',
+export const FlexibleSelected = Template.bind({});
+FlexibleSelected.storyName = "Flexible Selected"
+FlexibleSelected.args = {
+  backgroundColor: "#DCDBDF",
+  flexible: true,
+  label: 'Flex Selected',
 };
 
-export const NoBorder = Template.bind({});
-NoBorder.args = {
-    ...Primary.args, 
-    outlined: true
-};
+/* export const WithIcon = Template.bind({});
+WithIcon.storyName = "With Icon";
+WithIcon.args = {
+  backgroundColor: "#fc038c",
+  label: 'Icon',
+  icon: penIcon
+}; */
 

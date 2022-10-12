@@ -1,0 +1,19 @@
+div{
+    display: inline-block;
+}
+
+textarea {
+    padding: 0.8rem;
+    color: #191B36;
+    border: 1px solid #191B36;
+    border-radius: 14px;
+    background-color: white;
+    resize: none;
+    margin-top: 4px;
+}
+
+textarea::placeholder{
+    line-height: 22px;
+    color: #757686;
+}
+

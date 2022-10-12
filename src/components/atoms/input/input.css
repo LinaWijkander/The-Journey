@@ -1,0 +1,23 @@
+input{
+    display: block;
+    color: #191B36;
+    background: #FFFFFF;
+    border: 1px solid #A3A4AF;
+    border-radius: 14px;
+    padding: 0px 12px 0px 12px ; 
+    margin-top: 4px;
+}
+
+input::placeholder{
+    color: #757686;
+}
+
+.input-small {
+    width: 212px;
+    height:44px;
+}
+
+.input-large {
+    width: 342px;
+    height: 44px;
+}

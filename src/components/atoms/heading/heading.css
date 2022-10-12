@@ -1,27 +1,38 @@
- .heading {
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-   color: black;
- }
- 
- .heading-small {
+
+.heading {
+    color:"#191B36";
+}
+
+.heading-xs {
+    font-family: "DMSans-Regular";
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.heading-small {
+    font-family: "DMSans-Regular";
     font-size: 15px;
-    padding: 10px 16px;
-  }
+    line-height: 22px;
+    letter-spacing: -0.41px;
+}
 
-  .heading-medium {
-    font-size: 20px;
-    padding: 11px 20px;
-  }
+.heading-medium {
+    font-family: "DMSans-Regular";
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+}
 
-  .heading-large {
-    font-size: 25px;
-    padding: 12px 24px;
-  } 
+.heading-medium-bold {
+    font-family: "DMSans-Bold";
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0.35px;
+}
 
-  .heading-huge {
-    font-size: 50px;
-    /* padding-top: 50px; */
-    padding: 13px 28px;
-  }
-
-  
+.heading-large-bold {
+    font-family: "DMSans-Bold";
+    font-size: 22px;
+    line-height: 28px;
+    letter-spacing: 0.35px;
+}

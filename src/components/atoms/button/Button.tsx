@@ -1,32 +1,24 @@
 import './button.css';
 
 interface ButtonProps {
-  primary?: boolean;
+  disabled?: boolean;
   backgroundColor?: string;
   size?: 'small' | 'medium' | 'large';
-  label?: string | JSX.Element; 
+  label?: string; 
+  icon?: JSX.Element
   onClick?: () => void;
-  //withIcon?: boolean;
-  //svg?: string;
 }
-// Button
-// isLoading
-// basic
-// pill
-// long Button
-// disabled
-// pill with icon
 
-export const Button = ({primary = false, size = 'medium', backgroundColor, label = "Button", ...props}: ButtonProps) => {
-  const mode = primary ? 'button-primary' : 'button-secondary';
-  //const Icon = svg ? svg : "Button";
+export const Button = ({disabled = false, size = 'small', backgroundColor, icon, label = "Button", ...props}: ButtonProps) => {
+  const mode = disabled ? 'button-disabled' : 'button-regular';
   return (
     <button
       type="button"
-      className={['button', `button-${size}`, mode].join(' ')}
+      className={['RegularMedium', 'button', `button-${size}`, mode].join(' ')}
       style={{backgroundColor }}
       {...props}>
-        {label}
+        {icon}{label}
     </button>
   );
 };
+
